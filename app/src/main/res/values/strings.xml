@@ -1,3 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SleepWellApp</string>
+    <!-- App Name -->
+    <string name="app_name">SleepWell</string>
+    
+    <!-- Common -->
+    <string name="ok">OK</string>
+    <string name="cancel">Annuler</string>
+    <string name="save">Enregistrer</string>
+    <string name="delete">Supprimer</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="next">Suivant</string>
+    <string name="back">Retour</string>
+    <string name="skip">Passer</string>
+    <string name="get_started">Commencer</string>
+    <string name="loading">Chargement…</string>
+    <string name="error">Erreur</string>
+    <string name="success">Succès</string>
+    <string name="day">jour</string>
+    <string name="days">jours</string>
+    
+    <!-- Onboarding -->
+    <string name="onboarding_title_1">Suivez votre sommeil</string>
+    <string name="onboarding_desc_1">Enregistrez vos sessions de sommeil et découvrez vos habitudes</string>
+    <string name="onboarding_title_2">Définissez des objectifs</string>
+    <string name="onboarding_desc_2">Créez des objectifs personnalisés et suivez votre progression</string>
+    <string name="onboarding_title_3">Conseils intelligents</string>
+    <string name="onboarding_desc_3">Recevez des recommandations IA pour améliorer votre sommeil</string>
+    <string name="onboarding_image">Image d\'onboarding</string>
+    
+    <!-- Auth -->
+    <string name="welcome_back">Bon retour !</string>
+    <string name="login_subtitle">Connectez-vous pour continuer</string>
+    <string name="create_account">Créer un compte</string>
+    <string name="email">Email</string>
+    <string name="password">Mot de passe</string>
+    <string name="confirm_password">Confirmer le mot de passe</string>
+    <string name="name">Nom</string>
+    <string name="age">Âge</string>
+    <string name="login">Connexion</string>
+    <string name="register">S\'inscrire</string>
+    <string name="dont_have_account">Pas de compte ? Inscrivez-vous</string>
+    <string name="already_have_account">Déjà un compte ? Connectez-vous</string>
+    <string name="error_login_failed">Échec de la connexion</string>
+    <string name="error_registration_failed">Échec de l\'inscription</string>
+    <string name="registration_success">Inscription réussie !</string>
+    <string name="error_passwords_not_match">Les mots de passe ne correspondent pas</string>
+    <string name="error_fill_all_fields">Veuillez remplir tous les champs</string>
+    
+    <!-- Dashboard -->
+    <string name="dashboard">Tableau de bord</string>
+    <string name="weekly_overview">Vue hebdomadaire</string>
+    <string name="statistics">Statistiques</string>
+    <string name="total_sessions">Sessions totales</string>
+    <string name="avg_duration">Durée moyenne</string>
+    <string name="avg_quality">Qualité moyenne</string>
+    <string name="total_hours">Heures totales</string>
+    <string name="hours_of_sleep">Heures de sommeil</string>
+    <string name="ai_insight">Conseil IA</string>
+    <string name="add_session">Ajouter une session</string>
+    <string name="add_sleep_session">Ajouter une session de sommeil</string>
+    <string name="start_time">Heure de début</string>
+    <string name="end_time">Heure de fin</string>
+    <string name="quality_0_100">Qualité (0-100)</string>
+    <string name="notes_optional">Notes (optionnel)</string>
+    
+    <!-- Goals -->
+    <string name="goals">Objectifs</string>
+    <string name="current_goal">Objectif actuel</string>
+    <string name="target_hours">Heures cibles</string>
+    <string name="target_quality">Qualité cible</string>
+    <string name="current_streak">Série actuelle</string>
+    <string name="best_streak">Meilleure série</string>
+    <string name="no_active_goal">Aucun objectif actif</string>
+    <string name="no_goal">Pas d\'objectif</string>
+    <string name="create_goal">Créer un objectif</string>
+    <string name="set_your_goal">Définir votre objectif</string>
+    <string name="goal_description">Choisissez la durée et la qualité de sommeil souhaitées</string>
+    <string name="sleep_duration">Durée de sommeil</string>
+    <string name="sleep_quality">Qualité de sommeil</string>
+    <string name="goal_created_success">Objectif créé avec succès</string>
+    
+    <!-- Tips -->
+    <string name="sleep_tips">Conseils sommeil</string>
+    <string name="tips_subtitle">Découvrez des astuces pour mieux dormir</string>
+    <string name="tip_icon">Icône du conseil</string>
+    <string name="tip_title_1">Horaire régulier</string>
+    <string name="tip_desc_1">Couchez-vous et levez-vous à la même heure chaque jour</string>
+    <string name="tip_title_2">Environnement frais</string>
+    <string name="tip_desc_2">Maintenez votre chambre entre 16-19°C pour un sommeil optimal</string>
+    <string name="tip_title_3">Éviter la caféine</string>
+    <string name="tip_desc_3">Pas de café ou thé 4-6 heures avant le coucher</string>
+    <string name="tip_title_4">Repas léger le soir</string>
+    <string name="tip_desc_4">Dînez au moins 2-3 heures avant de dormir</string>
+    <string name="tip_title_5">Exercice régulier</string>
+    <string name="tip_desc_5">30 minutes d\'exercice par jour, mais pas trop tard</string>
+    <string name="tip_title_6">Chambre sombre</string>
+    <string name="tip_desc_6">Utilisez des rideaux occultants ou un masque de sommeil</string>
+    <string name="tip_title_7">Relaxation avant sommeil</string>
+    <string name="tip_desc_7">Méditation, lecture ou respiration profonde</string>
+    <string name="tip_title_8">Éviter les écrans</string>
+    <string name="tip_desc_8">Pas de téléphone ou tablette 1 heure avant de dormir</string>
+    <string name="tip_title_9">Routine du soir</string>
+    <string name="tip_desc_9">Créez un rituel relaxant avant le coucher</string>
+    <string name="tip_title_10">Gestion du stress</string>
+    <string name="tip_desc_10">Pratiquez la méditation ou le yoga pour réduire le stress</string>
+    
+    <!-- Profile -->
+    <string name="profile">Profil</string>
+    <string name="profile_picture">Photo de profil</string>
+    <string name="user_name">Nom d\'utilisateur</string>
+    <string name="settings">Paramètres</string>
+    <string name="dark_mode">Mode sombre</string>
+    <string name="sleep_reminder">Rappel sommeil</string>
+    <string name="wakeup_reminder">Rappel réveil</string>
+    <string name="export_data">Exporter les données</string>
+    <string name="export_success">Données exportées avec succès</string>
+    <string name="share_data">Partager les données</string>
+    <string name="logout">Déconnexion</string>
+    <string name="logout_confirmation">Êtes-vous sûr de vouloir vous déconnecter ?</string>
+    
+    <!-- Notifications -->
+    <string name="notification_sleep_title">Heure de dormir !</string>
+    <string name="notification_sleep_message">Il est temps d\'aller au lit pour atteindre vos objectifs</string>
+    <string name="notification_wakeup_title">Bon réveil !</string>
+    <string name="notification_wakeup_message">C\'est l\'heure de se lever !</string>
+    
+    <!-- Bottom Navigation -->
+    <string name="nav_dashboard">Accueil</string>
+    <string name="nav_goals">Objectifs</string>
+    <string name="nav_tips">Conseils</string>
+    <string name="nav_profile">Profil</string>
 </resources>

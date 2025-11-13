@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SleepWell</string>
+    
+    <!-- Common -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="skip">Skip</string>
+    <string name="get_started">Get Started</string>
+    <string name="loading">Loading…</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+    <string name="day">day</string>
+    <string name="days">days</string>
+    
+    <!-- Onboarding -->
+    <string name="onboarding_title_1">Track Your Sleep</string>
+    <string name="onboarding_desc_1">Record your sleep sessions and discover your habits</string>
+    <string name="onboarding_title_2">Set Goals</string>
+    <string name="onboarding_desc_2">Create personalized goals and track your progress</string>
+    <string name="onboarding_title_3">Smart Insights</string>
+    <string name="onboarding_desc_3">Get AI recommendations to improve your sleep</string>
+    <string name="onboarding_image">Onboarding image</string>
+    
+    <!-- Auth -->
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="login_subtitle">Sign in to continue</string>
+    <string name="create_account">Create Account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="dont_have_account">Don\'t have an account? Sign up</string>
+    <string name="already_have_account">Already have an account? Sign in</string>
+    <string name="error_login_failed">Login failed</string>
+    <string name="error_registration_failed">Registration failed</string>
+    <string name="registration_success">Registration successful!</string>
+    <string name="error_passwords_not_match">Passwords don\'t match</string>
+    <string name="error_fill_all_fields">Please fill all fields</string>
+    
+    <!-- Dashboard -->
+    <string name="dashboard">Dashboard</string>
+    <string name="weekly_overview">Weekly Overview</string>
+    <string name="statistics">Statistics</string>
+    <string name="total_sessions">Total Sessions</string>
+    <string name="avg_duration">Avg Duration</string>
+    <string name="avg_quality">Avg Quality</string>
+    <string name="total_hours">Total Hours</string>
+    <string name="hours_of_sleep">Hours of Sleep</string>
+    <string name="ai_insight">AI Insight</string>
+    <string name="add_session">Add Session</string>
+    <string name="add_sleep_session">Add Sleep Session</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="quality_0_100">Quality (0-100)</string>
+    <string name="notes_optional">Notes (optional)</string>
+    
+    <!-- Goals -->
+    <string name="goals">Goals</string>
+    <string name="current_goal">Current Goal</string>
+    <string name="target_hours">Target Hours</string>
+    <string name="target_quality">Target Quality</string>
+    <string name="current_streak">Current Streak</string>
+    <string name="best_streak">Best Streak</string>
+    <string name="no_active_goal">No active goal</string>
+    <string name="no_goal">No goal</string>
+    <string name="create_goal">Create Goal</string>
+    <string name="set_your_goal">Set Your Goal</string>
+    <string name="goal_description">Choose your desired sleep duration and quality</string>
+    <string name="sleep_duration">Sleep Duration</string>
+    <string name="sleep_quality">Sleep Quality</string>
+    <string name="goal_created_success">Goal created successfully</string>
+    
+    <!-- Tips -->
+    <string name="sleep_tips">Sleep Tips</string>
+    <string name="tips_subtitle">Discover tips to sleep better</string>
+    <string name="tip_icon">Tip icon</string>
+    <string name="tip_title_1">Regular Schedule</string>
+    <string name="tip_desc_1">Go to bed and wake up at the same time every day</string>
+    <string name="tip_title_2">Cool Environment</string>
+    <string name="tip_desc_2">Keep your bedroom between 60-67°F for optimal sleep</string>
+    <string name="tip_title_3">Avoid Caffeine</string>
+    <string name="tip_desc_3">No coffee or tea 4-6 hours before bedtime</string>
+    <string name="tip_title_4">Light Evening Meal</string>
+    <string name="tip_desc_4">Eat dinner at least 2-3 hours before sleeping</string>
+    <string name="tip_title_5">Regular Exercise</string>
+    <string name="tip_desc_5">30 minutes of exercise daily, but not too late</string>
+    <string name="tip_title_6">Dark Room</string>
+    <string name="tip_desc_6">Use blackout curtains or a sleep mask</string>
+    <string name="tip_title_7">Relaxation Before Sleep</string>
+    <string name="tip_desc_7">Meditation, reading or deep breathing</string>
+    <string name="tip_title_8">Avoid Screens</string>
+    <string name="tip_desc_8">No phone or tablet 1 hour before sleeping</string>
+    <string name="tip_title_9">Evening Routine</string>
+    <string name="tip_desc_9">Create a relaxing ritual before bed</string>
+    <string name="tip_title_10">Stress Management</string>
+    <string name="tip_desc_10">Practice meditation or yoga to reduce stress</string>
+    
+    <!-- Profile -->
+    <string name="profile">Profile</string>
+    <string name="profile_picture">Profile picture</string>
+    <string name="user_name">Username</string>
+    <string name="settings">Settings</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="sleep_reminder">Sleep Reminder</string>
+    <string name="wakeup_reminder">Wakeup Reminder</string>
+    <string name="export_data">Export Data</string>
+    <string name="export_success">Data exported successfully</string>
+    <string name="share_data">Share Data</string>
+    <string name="logout">Logout</string>
+    <string name="logout_confirmation">Are you sure you want to logout?</string>
+    
+    <!-- Notifications -->
+    <string name="notification_sleep_title">Time to Sleep!</string>
+    <string name="notification_sleep_message">It\'s time to go to bed to reach your goals</string>
+    <string name="notification_wakeup_title">Good Morning!</string>
+    <string name="notification_wakeup_message">Time to wake up!</string>
+    
+    <!-- Bottom Navigation -->
+    <string name="nav_dashboard">Home</string>
+    <string name="nav_goals">Goals</string>
+    <string name="nav_tips">Tips</string>
+    <string name="nav_profile">Profile</string>
+</resources>
