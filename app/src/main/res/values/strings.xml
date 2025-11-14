@@ -52,10 +52,12 @@
     <string name="dashboard">Tableau de bord</string>
     <string name="weekly_overview">Vue hebdomadaire</string>
     <string name="statistics">Statistiques</string>
+    <string name="last_7_days">Les 7 derniers jours</string>
     <string name="total_sessions">Sessions totales</string>
     <string name="avg_duration">Durée moyenne</string>
     <string name="avg_quality">Qualité moyenne</string>
     <string name="total_hours">Heures totales</string>
+    <string name="stat_icon">Icône statistique</string>
     <string name="hours_of_sleep">Heures de sommeil</string>
     <string name="ai_insight">Conseil IA</string>
     <string name="add_session">Ajouter une session</string>

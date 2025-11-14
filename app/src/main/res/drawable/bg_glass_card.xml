@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shadow Layer -->
+    <item android:top="2dp" android:left="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/shadow_medium" />
+            <corners android:radius="24dp" />
+        </shape>
+    </item>
+    
+    <!-- Glass Layer -->
+    <item android:bottom="2dp" android:right="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/glass_white" />
+            <corners android:radius="24dp" />
+            <stroke
+                android:width="1dp"
+                android:color="@color/glass_light" />
+        </shape>
+    </item>
+</layer-list>

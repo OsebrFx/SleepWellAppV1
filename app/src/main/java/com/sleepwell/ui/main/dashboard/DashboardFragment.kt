@@ -49,19 +49,72 @@ class DashboardFragment : Fragment() {
         viewModel = ViewModelProvider(this)[DashboardViewModel::class.java]
         userId = (activity as? MainActivity)?.getUserId() ?: -1
 
+        setupAnimations()
         setupListeners()
         observeViewModel()
         loadData()
     }
 
+    private fun setupAnimations() {
+        // Animate cards entrance
+        binding.cardWeeklyChart.alpha = 0f
+        binding.cardWeeklyChart.translationY = 50f
+        binding.cardWeeklyChart.animate()
+            .alpha(1f)
+            .translationY(0f)
+            .setDuration(400)
+            .setStartDelay(100)
+            .start()
+
+        binding.statsGrid.alpha = 0f
+        binding.statsGrid.translationY = 50f
+        binding.statsGrid.animate()
+            .alpha(1f)
+            .translationY(0f)
+            .setDuration(400)
+            .setStartDelay(200)
+            .start()
+
+        // Animate FAB with bounce effect
+        binding.fabAddSession.scaleX = 0f
+        binding.fabAddSession.scaleY = 0f
+        binding.fabAddSession.animate()
+            .scaleX(1f)
+            .scaleY(1f)
+            .setDuration(500)
+            .setStartDelay(300)
+            .setInterpolator(android.view.animation.OvershootInterpolator())
+            .start()
+    }
+
     private fun setupListeners() {
         binding.fabAddSession.setOnClickListener {
+            // Animate FAB click
+            it.animate()
+                .scaleX(0.9f)
+                .scaleY(0.9f)
+                .setDuration(100)
+                .withEndAction {
+                    it.animate()
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .setDuration(100)
+                        .start()
+                }
+                .start()
             showAddSessionDialog()
         }
 
         binding.swipeRefresh.setOnRefreshListener {
             loadData()
         }
+
+        // Configure swipe refresh colors
+        binding.swipeRefresh.setColorSchemeResources(
+            R.color.primary,
+            R.color.secondary,
+            R.color.accent_purple
+        )
     }
 
     private fun loadData() {
