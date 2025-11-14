@@ -52,6 +52,8 @@ class MainActivity : AppCompatActivity() {
     private fun loadFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .setCustomAnimations(
+                R.anim.fade_in_scale,
+                R.anim.fade_out_scale,
                 R.anim.fade_in,
                 R.anim.fade_out
             )
