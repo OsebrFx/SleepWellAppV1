@@ -23,24 +23,91 @@ class SplashActivity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Animate logo
-        binding.logoImageView.alpha = 0f
-        binding.logoImageView.animate()
-            .alpha(1f)
-            .setDuration(Constants.ANIM_DURATION_LONG)
-            .start()
-
-        binding.appNameTextView.alpha = 0f
-        binding.appNameTextView.animate()
-            .alpha(1f)
-            .setDuration(Constants.ANIM_DURATION_LONG)
-            .setStartDelay(200)
-            .start()
+        setupAnimations()
 
         // Navigate after delay
         Handler(Looper.getMainLooper()).postDelayed({
             navigateToNextScreen()
-        }, 2500)
+        }, 2800)
+    }
+
+    private fun setupAnimations() {
+        // Animate background circles with rotation and scale
+        binding.circleTop.alpha = 0f
+        binding.circleTop.scaleX = 0.5f
+        binding.circleTop.scaleY = 0.5f
+        binding.circleTop.animate()
+            .alpha(0.3f)
+            .scaleX(1f)
+            .scaleY(1f)
+            .rotation(180f)
+            .setDuration(1500)
+            .setInterpolator(android.view.animation.DecelerateInterpolator())
+            .start()
+
+        binding.circleBottom.alpha = 0f
+        binding.circleBottom.scaleX = 0.5f
+        binding.circleBottom.scaleY = 0.5f
+        binding.circleBottom.animate()
+            .alpha(0.3f)
+            .scaleX(1f)
+            .scaleY(1f)
+            .rotation(-180f)
+            .setDuration(1500)
+            .setStartDelay(100)
+            .setInterpolator(android.view.animation.DecelerateInterpolator())
+            .start()
+
+        // Animate logo container with bounce effect
+        binding.logoContainer.alpha = 0f
+        binding.logoContainer.scaleX = 0.3f
+        binding.logoContainer.scaleY = 0.3f
+        binding.logoContainer.animate()
+            .alpha(1f)
+            .scaleX(1f)
+            .scaleY(1f)
+            .setDuration(800)
+            .setStartDelay(300)
+            .setInterpolator(android.view.animation.OvershootInterpolator(1.5f))
+            .start()
+
+        // Animate logo image inside container
+        binding.logoImageView.alpha = 0f
+        binding.logoImageView.animate()
+            .alpha(1f)
+            .setDuration(600)
+            .setStartDelay(800)
+            .start()
+
+        // Animate app name with slide up
+        binding.appNameTextView.alpha = 0f
+        binding.appNameTextView.translationY = 50f
+        binding.appNameTextView.animate()
+            .alpha(1f)
+            .translationY(0f)
+            .setDuration(700)
+            .setStartDelay(1000)
+            .setInterpolator(android.view.animation.DecelerateInterpolator())
+            .start()
+
+        // Animate tagline
+        binding.taglineTextView.alpha = 0f
+        binding.taglineTextView.translationY = 30f
+        binding.taglineTextView.animate()
+            .alpha(1f)
+            .translationY(0f)
+            .setDuration(600)
+            .setStartDelay(1200)
+            .setInterpolator(android.view.animation.DecelerateInterpolator())
+            .start()
+
+        // Animate progress bar with fade in
+        binding.progressBar.alpha = 0f
+        binding.progressBar.animate()
+            .alpha(1f)
+            .setDuration(500)
+            .setStartDelay(1500)
+            .start()
     }
 
     private fun navigateToNextScreen() {
