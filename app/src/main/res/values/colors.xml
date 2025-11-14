@@ -44,6 +44,7 @@
     <color name="text_primary">#0F172A</color>
     <color name="text_secondary">#64748B</color>
     <color name="text_tertiary">#94A3B8</color>
+    <color name="text_hint">#94A3B8</color>
 
     <!-- Dark Theme Colors - Deep Dark -->
     <color name="dark_background">#0A0E1A</color>
