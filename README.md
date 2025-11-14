@@ -21,6 +21,12 @@ Application complète de suivi du sommeil avec interface moderne, graphiques ani
 - **Mode sombre** : Support complet du thème sombre
 - **Multi-langues** : Français (défaut), Anglais, Arabe avec RTL
 
+### 💪 Fonctionnalités Fitness (Nouveau)
+- **Fréquence respiratoire** : Mesure basée sur la caméra avec détection de pose ML Kit (analyse du mouvement du torse)
+- **Fréquence cardiaque** : Mesure PPG (photoplethysmographie) via caméra avec flash
+- **Suivi d'activité** : Compteur de pas, distance parcourue et calories brûlées via capteurs
+- **Journal d'entraînement** : Enregistrement et historique des séances avec types, durée et notes
+
 ### 🎨 Interface
 - **Material Design 3** avec glassmorphism
 - **Animations fluides** : Transitions, fade, slide
@@ -38,9 +44,12 @@ Application complète de suivi du sommeil avec interface moderne, graphiques ani
 - Database: Room (SQLite)
 - API: Retrofit + OkHttp
 - Charts: MPAndroidChart
-- Async: Coroutines + LiveData
+- Async: Coroutines + LiveData + StateFlow
 - DI: Manual (Repository Pattern)
 - Notifications: WorkManager
+- Camera: CameraX (1.3.1)
+- ML: ML Kit Pose Detection (on-device)
+- Sensors: SensorManager (step counter)
 ```
 
 ### Structure du Projet
@@ -81,6 +90,16 @@ app/src/main/
 │   │       ├── goals/GoalsFragment.kt
 │   │       ├── tips/TipsFragment.kt
 │   │       └── profile/ProfileFragment.kt
+│   ├── fitness/
+│   │   ├── RespirationAnalyzer.kt
+│   │   ├── PoseHelper.kt
+│   │   ├── CameraRespirationActivity.kt
+│   │   ├── HeartRateAnalyzer.kt
+│   │   ├── CameraHeartRateActivity.kt
+│   │   ├── ActivityTracker.kt
+│   │   ├── ActivityTrackerActivity.kt
+│   │   ├── WorkoutData.kt
+│   │   └── WorkoutLogActivity.kt
 │   ├── viewmodel/
 │   │   ├── AuthViewModel.kt
 │   │   ├── DashboardViewModel.kt
@@ -189,6 +208,19 @@ com.github.PhilJay:MPAndroidChart:v3.1.0
 
 // ViewPager2
 androidx.viewpager2:viewpager2:1.0.0
+
+// CameraX (Fitness Features)
+androidx.camera:camera-core:1.3.1
+androidx.camera:camera-camera2:1.3.1
+androidx.camera:camera-lifecycle:1.3.1
+androidx.camera:camera-view:1.3.1
+
+// ML Kit Pose Detection (On-device)
+com.google.mlkit:pose-detection:18.0.0-beta4
+com.google.mlkit:pose-detection-accurate:18.0.0-beta4
+
+// Google Play Services (Activity Recognition)
+com.google.android.gms:play-services-location:21.1.0
 ```
 
 ## 🎯 Utilisation
@@ -223,6 +255,55 @@ androidx.viewpager2:viewpager2:1.0.0
 3. Choisissez l'app de partage (Email, Drive, etc.)
 4. Le fichier CSV contient toutes vos sessions
 
+### 💪 Utiliser les Fonctionnalités Fitness
+
+#### Mesurer la Fréquence Respiratoire
+
+1. Lancez `CameraRespirationActivity`
+2. Acceptez la permission caméra si demandée
+3. Placez-vous devant la caméra avec le torse visible
+4. Respirez normalement pendant 45 secondes
+5. Le résultat s'affiche avec un score de confiance (BPM ± 2)
+
+**Algorithme** : Détection de pose ML Kit → Extraction position Y du torse → Détrend → Filtre passe-bande (0.1-0.8 Hz) → Détection de pics → Calcul BPM
+
+**Plage valide** : 6-48 BPM
+
+#### Mesurer la Fréquence Cardiaque (PPG)
+
+1. Lancez `CameraHeartRateActivity`
+2. Acceptez la permission caméra
+3. Placez votre doigt sur l'objectif arrière pour couvrir complètement la lentille
+4. Maintenez immobile pendant 15 secondes (le flash s'active automatiquement)
+5. Le résultat s'affiche avec un score de confiance (BPM ± 5)
+
+**Algorithme** : Extraction canal rouge → Détrend → Filtre passe-bande (0.5-3 Hz / 30-180 BPM) → Détection de pics → Calcul BPM
+
+**Plage valide** : 40-200 BPM
+
+#### Suivre votre Activité
+
+1. Lancez `ActivityTrackerActivity`
+2. Acceptez la permission ACTIVITY_RECOGNITION (Android Q+)
+3. Cliquez sur **Démarrer** pour commencer le suivi
+4. L'app compte les pas en arrière-plan via le capteur TYPE_STEP_COUNTER
+5. Distance et calories calculées automatiquement
+6. Cliquez sur **Arrêter** pour suspendre, **Réinitialiser** pour remettre à zéro
+
+**Formules** :
+- Distance = Pas × Longueur de foulée (0.762m par défaut)
+- Calories = Pas × 0.04
+
+#### Enregistrer un Entraînement
+
+1. Lancez `WorkoutLogActivity`
+2. Cliquez sur le bouton **+** (FAB)
+3. Sélectionnez le type : Course, Marche, Vélo, Natation, Yoga, Musculation, Sports, Autre
+4. Entrez la durée en minutes
+5. Ajoutez des notes (optionnel)
+6. Les calories sont calculées automatiquement selon le type
+7. L'historique s'affiche avec statistiques des 7 derniers jours
+
 ## 🌍 Langues Supportées
 
 ### Changement de Langue
@@ -256,6 +337,63 @@ L'app demande automatiquement la permission au premier lancement.
 Les rappels utilisent WorkManager pour :
 - Rappel de coucher (configurable dans Profil)
 - Rappel de réveil (configurable dans Profil)
+
+## 🧪 Tests
+
+### Tests Unitaires
+
+Les tests unitaires se trouvent dans `app/src/test/`:
+
+```bash
+# Exécuter tous les tests unitaires
+./gradlew test
+
+# Tests spécifiques
+./gradlew test --tests RespirationAnalyzerTest
+./gradlew test --tests HeartRateAnalyzerTest
+./gradlew test --tests WorkoutDataTest
+```
+
+**Couverture** :
+- `RespirationAnalyzerTest` : Tests avec signaux synthétiques à différentes fréquences (12, 18 BPM), validation physiologique, signaux irréguliers
+- `HeartRateAnalyzerTest` : Tests PPG à 60, 75 BPM, validation de plage (40-200 BPM), signaux plats
+- `WorkoutDataTest` : Tests de formatage, calcul de calories, gestion des IDs uniques
+
+### Tests d'Instrumentation
+
+Les tests d'instrumentation se trouvent dans `app/src/androidTest/`:
+
+```bash
+# Exécuter tous les tests d'instrumentation (nécessite un appareil/émulateur)
+./gradlew connectedAndroidTest
+
+# Tests spécifiques
+./gradlew connectedAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.sleepwell.fitness.CameraRespirationActivityTest
+```
+
+**Couverture** :
+- `CameraRespirationActivityTest` : Test de lancement, permissions, UI, boutons, affichage initial
+
+## 🔬 Limitations Connues
+
+### Fonctionnalités Fitness
+
+**Fréquence Respiratoire** :
+- Nécessite un bon éclairage et une position stable
+- Précision : ±2 BPM (usage bien-être, non médical)
+- Ne fonctionne pas avec des vêtements trop amples
+
+**Fréquence Cardiaque** :
+- Nécessite un doigt propre et immobile
+- Précision : ±5 BPM (usage bien-être, non médical)
+- Peut échouer avec un doigt trop froid ou tremblant
+
+**Suivi d'Activité** :
+- Nécessite un capteur TYPE_STEP_COUNTER (API 19+)
+- Certains appareils peuvent ne pas avoir le capteur
+- La longueur de foulée est estimée (0.762m par défaut)
+
+**Disclaimer Médical** : Ces outils sont destinés au bien-être et au fitness uniquement, **pas à un usage médical ou diagnostique**. Consultez un professionnel de santé pour toute question médicale.
 
 ## 🐛 Résolution de Problèmes
 
@@ -371,6 +509,19 @@ Pour toute question ou suggestion :
 
 ---
 
-**Version** : 1.0.0
-**Dernière mise à jour** : Novembre 2024
+**Version** : 1.1.0
+**Dernière mise à jour** : Novembre 2025
 **Statut** : ✅ Production Ready
+
+## 📋 Changelog
+
+### Version 1.1.0 - Novembre 2025
+- ✨ **Nouvelle fonctionnalité** : Mesure de la fréquence respiratoire via caméra et ML Kit Pose Detection
+- ✨ **Nouvelle fonctionnalité** : Mesure de la fréquence cardiaque (PPG) via caméra
+- ✨ **Nouvelle fonctionnalité** : Suivi d'activité avec compteur de pas, distance et calories
+- ✨ **Nouvelle fonctionnalité** : Journal d'entraînement avec historique et statistiques
+- 🧪 **Tests** : Ajout de tests unitaires (RespirationAnalyzer, HeartRateAnalyzer, WorkoutData) et d'instrumentation
+- 📚 **Documentation** : Mise à jour du README avec instructions complètes pour les fonctionnalités fitness
+
+### Version 1.0.0 - Novembre 2024
+- 🎉 Release initiale avec suivi du sommeil, objectifs, conseils IA et UI premium
