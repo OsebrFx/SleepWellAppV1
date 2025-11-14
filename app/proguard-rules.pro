@@ -80,3 +80,15 @@
 -keep class * extends androidx.work.Worker
 -keep class * extends androidx.work.InputMerger
 -keep class androidx.work.impl.** { *; }
+
+# ML Kit Pose Detection
+-keep class com.google.mlkit.vision.pose.** { *; }
+-keep class com.google.android.gms.internal.** { *; }
+-dontwarn com.google.mlkit.**
+
+# CameraX
+-keep class androidx.camera.** { *; }
+-dontwarn androidx.camera.**
+
+# Fitness package
+-keep class com.sleepwell.fitness.** { *; }

@@ -3,7 +3,7 @@
     <!-- App Name -->
     <string name="app_name">SleepWell</string>
     <string name="splash_tagline">Votre compagnon de sommeil</string>
-    
+
     <!-- Common -->
     <string name="ok">OK</string>
     <string name="cancel">Annuler</string>
@@ -21,7 +21,7 @@
     <string name="success">Succès</string>
     <string name="day">jour</string>
     <string name="days">jours</string>
-    
+
     <!-- Onboarding -->
     <string name="onboarding_title_1">Suivez votre sommeil</string>
     <string name="onboarding_desc_1">Enregistrez vos sessions de sommeil et découvrez vos habitudes</string>
@@ -30,7 +30,7 @@
     <string name="onboarding_title_3">Conseils intelligents</string>
     <string name="onboarding_desc_3">Recevez des recommandations IA pour améliorer votre sommeil</string>
     <string name="onboarding_image">Image d\'onboarding</string>
-    
+
     <!-- Auth -->
     <string name="welcome_back">Bon retour !</string>
     <string name="login_subtitle">Connectez-vous pour continuer</string>
@@ -49,7 +49,7 @@
     <string name="registration_success">Inscription réussie !</string>
     <string name="error_passwords_not_match">Les mots de passe ne correspondent pas</string>
     <string name="error_fill_all_fields">Veuillez remplir tous les champs</string>
-    
+
     <!-- Dashboard -->
     <string name="dashboard">Tableau de bord</string>
     <string name="weekly_overview">Vue hebdomadaire</string>
@@ -68,7 +68,7 @@
     <string name="end_time">Heure de fin</string>
     <string name="quality_0_100">Qualité (0-100)</string>
     <string name="notes_optional">Notes (optionnel)</string>
-    
+
     <!-- Goals -->
     <string name="goals">Objectifs</string>
     <string name="current_goal">Objectif actuel</string>
@@ -84,7 +84,7 @@
     <string name="sleep_duration">Durée de sommeil</string>
     <string name="sleep_quality">Qualité de sommeil</string>
     <string name="goal_created_success">Objectif créé avec succès</string>
-    
+
     <!-- Tips -->
     <string name="sleep_tips">Conseils sommeil</string>
     <string name="tips_subtitle">Découvrez des astuces pour mieux dormir</string>
@@ -109,7 +109,7 @@
     <string name="tip_desc_9">Créez un rituel relaxant avant le coucher</string>
     <string name="tip_title_10">Gestion du stress</string>
     <string name="tip_desc_10">Pratiquez la méditation ou le yoga pour réduire le stress</string>
-    
+
     <!-- Profile -->
     <string name="profile">Profil</string>
     <string name="profile_picture">Photo de profil</string>
@@ -123,16 +123,49 @@
     <string name="share_data">Partager les données</string>
     <string name="logout">Déconnexion</string>
     <string name="logout_confirmation">Êtes-vous sûr de vouloir vous déconnecter ?</string>
-    
+
     <!-- Notifications -->
     <string name="notification_sleep_title">Heure de dormir !</string>
     <string name="notification_sleep_message">Il est temps d\'aller au lit pour atteindre vos objectifs</string>
     <string name="notification_wakeup_title">Bon réveil !</string>
     <string name="notification_wakeup_message">C\'est l\'heure de se lever !</string>
-    
+
     <!-- Bottom Navigation -->
     <string name="nav_dashboard">Accueil</string>
     <string name="nav_goals">Objectifs</string>
     <string name="nav_tips">Conseils</string>
     <string name="nav_profile">Profil</string>
+
+    <!-- Fitness Features -->
+    <string name="respiratory_rate">Fréquence respiratoire</string>
+    <string name="heart_rate">Fréquence cardiaque</string>
+    <string name="reset_measurement">Réinitialiser</string>
+    <string name="close">Fermer</string>
+    <string name="bpm">BPM</string>
+    <string name="waiting">En attente…</string>
+    <string name="activity_tracker">Suivi d\'activité</string>
+    <string name="steps">Pas</string>
+    <string name="distance">Distance</string>
+    <string name="calories">Calories</string>
+    <string name="workout_log">Journal d\'entraînement</string>
+    <string name="start_workout">Démarrer l\'entraînement</string>
+    <string name="stop_workout">Arrêter</string>
+    <string name="pause_workout">Pause</string>
+    <string name="resume_workout">Reprendre</string>
+    <string name="workout_type">Type d\'entraînement</string>
+    <string name="workout_duration">Durée</string>
+    <string name="workout_history">Historique</string>
+    <string name="permissions_required">Permissions requises</string>
+    <string name="camera_permission_rationale">La caméra est nécessaire pour mesurer la fréquence respiratoire</string>
+    <string name="activity_permission_rationale">Le capteur d\'activité est nécessaire pour compter les pas</string>
+
+    <!-- Heart Rate Measurement -->
+    <string name="hr_instruction_title">Mesure de la fréquence cardiaque</string>
+    <string name="hr_instruction_desc">Placez votre doigt sur l\'objectif de la caméra arrière pour couvrir complètement la lentille. Maintenez-le immobile pendant 15 secondes.</string>
+    <string name="hr_medical_disclaimer">Cet outil est destiné au bien-être uniquement, pas à un usage médical.</string>
+
+    <!-- Respiratory Rate Measurement -->
+    <string name="rr_instruction_title">Mesure de la fréquence respiratoire</string>
+    <string name="rr_instruction_desc">Tenez-vous devant la caméra avec votre torse visible. Respirez normalement pendant 45 secondes.</string>
+    <string name="rr_medical_disclaimer">Cet outil est destiné au bien-être uniquement, pas à un usage médical.</string>
 </resources>

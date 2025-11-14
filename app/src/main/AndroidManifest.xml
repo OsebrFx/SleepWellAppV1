@@ -10,6 +10,12 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
+    <!-- Fitness Features -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.front" android:required="false" />
+
     <application
         android:name=".SleepWellApplication"
         android:allowBackup="true"
@@ -50,6 +56,27 @@
         <!-- Main Activity -->
         <activity
             android:name=".ui.main.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Fitness Activities -->
+        <activity
+            android:name=".fitness.CameraRespirationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".fitness.CameraHeartRateActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".fitness.ActivityTrackerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".fitness.WorkoutLogActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 
