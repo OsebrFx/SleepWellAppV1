@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SleepWell</string>
+    
+    <!-- Common -->
+    <string name="ok">حسناً</string>
+    <string name="cancel">إلغاء</string>
+    <string name="save">حفظ</string>
+    <string name="delete">حذف</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="next">التالي</string>
+    <string name="back">رجوع</string>
+    <string name="skip">تخطي</string>
+    <string name="get_started">ابدأ</string>
+    <string name="loading">جاري التحميل…</string>
+    <string name="error">خطأ</string>
+    <string name="success">نجح</string>
+    <string name="day">يوم</string>
+    <string name="days">أيام</string>
+    
+    <!-- Onboarding -->
+    <string name="onboarding_title_1">تتبع نومك</string>
+    <string name="onboarding_desc_1">سجل جلسات نومك واكتشف عاداتك</string>
+    <string name="onboarding_title_2">حدد الأهداف</string>
+    <string name="onboarding_desc_2">أنشئ أهداف شخصية وتتبع تقدمك</string>
+    <string name="onboarding_title_3">رؤى ذكية</string>
+    <string name="onboarding_desc_3">احصل على توصيات الذكاء الاصطناعي لتحسين نومك</string>
+    <string name="onboarding_image">صورة البداية</string>
+    
+    <!-- Auth -->
+    <string name="welcome_back">مرحباً بعودتك!</string>
+    <string name="login_subtitle">سجل الدخول للمتابعة</string>
+    <string name="create_account">إنشاء حساب</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="password">كلمة المرور</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="name">الاسم</string>
+    <string name="age">العمر</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="register">التسجيل</string>
+    <string name="dont_have_account">ليس لديك حساب؟ سجل</string>
+    <string name="already_have_account">لديك حساب؟ سجل الدخول</string>
+    <string name="error_login_failed">فشل تسجيل الدخول</string>
+    <string name="error_registration_failed">فشل التسجيل</string>
+    <string name="registration_success">تم التسجيل بنجاح!</string>
+    <string name="error_passwords_not_match">كلمات المرور غير متطابقة</string>
+    <string name="error_fill_all_fields">يرجى ملء جميع الحقول</string>
+    
+    <!-- Dashboard -->
+    <string name="dashboard">لوحة القيادة</string>
+    <string name="weekly_overview">نظرة أسبوعية</string>
+    <string name="statistics">الإحصائيات</string>
+    <string name="total_sessions">إجمالي الجلسات</string>
+    <string name="avg_duration">المدة المتوسطة</string>
+    <string name="avg_quality">الجودة المتوسطة</string>
+    <string name="total_hours">إجمالي الساعات</string>
+    <string name="hours_of_sleep">ساعات النوم</string>
+    <string name="ai_insight">نصيحة ذكية</string>
+    <string name="add_session">إضافة جلسة</string>
+    <string name="add_sleep_session">إضافة جلسة نوم</string>
+    <string name="start_time">وقت البدء</string>
+    <string name="end_time">وقت الانتهاء</string>
+    <string name="quality_0_100">الجودة (0-100)</string>
+    <string name="notes_optional">ملاحظات (اختياري)</string>
+    
+    <!-- Goals -->
+    <string name="goals">الأهداف</string>
+    <string name="current_goal">الهدف الحالي</string>
+    <string name="target_hours">الساعات المستهدفة</string>
+    <string name="target_quality">الجودة المستهدفة</string>
+    <string name="current_streak">السلسلة الحالية</string>
+    <string name="best_streak">أفضل سلسلة</string>
+    <string name="no_active_goal">لا يوجد هدف نشط</string>
+    <string name="no_goal">لا يوجد هدف</string>
+    <string name="create_goal">إنشاء هدف</string>
+    <string name="set_your_goal">حدد هدفك</string>
+    <string name="goal_description">اختر مدة النوم والجودة المرغوبة</string>
+    <string name="sleep_duration">مدة النوم</string>
+    <string name="sleep_quality">جودة النوم</string>
+    <string name="goal_created_success">تم إنشاء الهدف بنجاح</string>
+    
+    <!-- Tips -->
+    <string name="sleep_tips">نصائح النوم</string>
+    <string name="tips_subtitle">اكتشف نصائح للنوم بشكل أفضل</string>
+    <string name="tip_icon">أيقونة النصيحة</string>
+    <string name="tip_title_1">جدول منتظم</string>
+    <string name="tip_desc_1">نم واستيقظ في نفس الوقت كل يوم</string>
+    <string name="tip_title_2">بيئة باردة</string>
+    <string name="tip_desc_2">حافظ على غرفتك بين 16-19 درجة للنوم الأمثل</string>
+    <string name="tip_title_3">تجنب الكافيين</string>
+    <string name="tip_desc_3">لا قهوة أو شاي قبل 4-6 ساعات من النوم</string>
+    <string name="tip_title_4">وجبة مسائية خفيفة</string>
+    <string name="tip_desc_4">تناول العشاء قبل النوم بساعتين على الأقل</string>
+    <string name="tip_title_5">تمارين منتظمة</string>
+    <string name="tip_desc_5">30 دقيقة من التمارين يومياً، لكن ليس في وقت متأخر</string>
+    <string name="tip_title_6">غرفة مظلمة</string>
+    <string name="tip_desc_6">استخدم ستائر معتمة أو قناع النوم</string>
+    <string name="tip_title_7">استرخاء قبل النوم</string>
+    <string name="tip_desc_7">تأمل، قراءة أو تنفس عميق</string>
+    <string name="tip_title_8">تجنب الشاشات</string>
+    <string name="tip_desc_8">لا هاتف أو جهاز لوحي قبل النوم بساعة</string>
+    <string name="tip_title_9">روتين مسائي</string>
+    <string name="tip_desc_9">أنشئ طقوس استرخاء قبل النوم</string>
+    <string name="tip_title_10">إدارة التوتر</string>
+    <string name="tip_desc_10">مارس التأمل أو اليوجا لتقليل التوتر</string>
+    
+    <!-- Profile -->
+    <string name="profile">الملف الشخصي</string>
+    <string name="profile_picture">صورة الملف الشخصي</string>
+    <string name="user_name">اسم المستخدم</string>
+    <string name="settings">الإعدادات</string>
+    <string name="dark_mode">الوضع الداكن</string>
+    <string name="sleep_reminder">تذكير النوم</string>
+    <string name="wakeup_reminder">تذكير الاستيقاظ</string>
+    <string name="export_data">تصدير البيانات</string>
+    <string name="export_success">تم تصدير البيانات بنجاح</string>
+    <string name="share_data">مشاركة البيانات</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="logout_confirmation">هل أنت متأكد من تسجيل الخروج؟</string>
+    
+    <!-- Notifications -->
+    <string name="notification_sleep_title">وقت النوم!</string>
+    <string name="notification_sleep_message">حان وقت النوم لتحقيق أهدافك</string>
+    <string name="notification_wakeup_title">صباح الخير!</string>
+    <string name="notification_wakeup_message">حان وقت الاستيقاظ!</string>
+    
+    <!-- Bottom Navigation -->
+    <string name="nav_dashboard">الرئيسية</string>
+    <string name="nav_goals">الأهداف</string>
+    <string name="nav_tips">النصائح</string>
+    <string name="nav_profile">الملف الشخصي</string>
+</resources>
