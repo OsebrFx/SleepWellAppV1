@@ -5,31 +5,95 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradient_primary">
 
-    <ImageView
-        android:id="@+id/logoImageView"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@drawable/ic_sleep_logo"
-        android:contentDescription="@string/app_name"
+    <!-- Animated Background Circles -->
+    <View
+        android:id="@+id/circleTop"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="-100dp"
+        android:layout_marginEnd="-100dp"
+        android:background="@drawable/bg_circle_blur"
+        android:alpha="0.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/circleBottom"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="-80dp"
+        android:layout_marginBottom="-80dp"
+        android:background="@drawable/bg_circle_blur"
+        android:alpha="0.3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Logo Container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logoContainer"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:cardCornerRadius="80dp"
+        app:cardElevation="20dp"
+        app:cardBackgroundColor="@color/glass_white"
         app:layout_constraintBottom_toTopOf="@+id/appNameTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_sleep_logo"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside" />
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/appNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:text="@string/app_name"
-        android:textColor="@android:color/white"
-        android:textSize="32sp"
+        android:textColor="@color/white"
+        android:textSize="42sp"
         android:textStyle="bold"
+        android:letterSpacing="0.05"
         android:fontFamily="sans-serif-medium"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/taglineTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoContainer" />
+
+    <TextView
+        android:id="@+id/taglineTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/splash_tagline"
+        android:textColor="@color/glass_white"
+        android:textSize="16sp"
+        android:letterSpacing="0.1"
+        android:fontFamily="sans-serif-light"
+        android:elevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoImageView" />
+        app:layout_constraintTop_toBottomOf="@+id/appNameTextView" />
+
+    <!-- Loading Progress -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="60dp"
+        android:indeterminateTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
